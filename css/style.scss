@@ -5,6 +5,7 @@ body {
   font-weight: 500;
   color: #222;
   line-height: (32/16);
+  overflow-x: hidden;
 }
 
 h2 {
@@ -52,7 +53,6 @@ img {
 .ly_main {
   max-width: 1440px;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 .bl_mv {
@@ -73,10 +73,11 @@ img {
   writing-mode: vertical-rl;
   -webkit-text-orientation: sideways;
   text-orientation: sideways;
+  z-index: 5;
 }
 
 .bl_area {
-  height: 100vh;
+  height: 100%;
 }
 
 .bl_about {
@@ -114,7 +115,7 @@ img {
 .bl_figma {
   max-width: 960px;
   margin: 0 auto;
-  padding-top: 160px;
+  padding: 260px 0 116px;
 }
 
 .bl_figma_content {
@@ -154,6 +155,95 @@ img {
     h2 {
       margin-top: -20px;
     }
+    p{
+      margin-top: 12px;
+    }
+  }
+}
+
+.bl_thoughts{
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  padding: 107px 0 214px;
+  background: #222;
+  ._inner{
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
+
+.bl_thoughts_ttl{
+  position: relative;
+  color: #fff;
+  text-align: center;
+  &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 536px;
+    height: 294px;
+    background: url('../img/bg_thoughts_ttl.png') 0 0 no-repeat;
+    background-size: contain;
+  }
+}
+
+.bl_thoughts_contents{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+  color: #fff;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -70px;
+    width: 48px;
+    height: 40px;
+    background: url('../img/bg_quo.png') 0 0 no-repeat;
+    background-size: contain;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -214px;
+    left: -250px;
+    width: 556px;
+    height: 200px;
+    background: url('../img/bg_thoughts_02.png') 0 0 no-repeat;
+    background-size: contain;
+  }
+  ._box01{
+    max-width: 440px;
+    p{
+      margin-top: 40px;
+    }
+    img{
+      max-width: 234px;
+    }
+  }
+  ._box02{
+    position: relative;
+    margin-top: 120px;
+    max-width: 440px;
+    &::after {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -240px;
+      width: 340px;
+      height: 453px;
+      background: url('../img/bg_thoughts_01.png') 0 0 no-repeat;
+      background-size: contain;
+    }
+    p{
+      margin-top: 40px;
+    }
+    img{
+      max-width: 234px;
+    }
   }
 }
 
@@ -173,4 +263,81 @@ img {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   color: #989898;
+}
+
+//slick
+.slick{
+  height: 770px;
+}
+.slick-slide img {
+  height: 100vw;
+  max-height: 770px;
+}
+
+.slick-arrow{
+  z-index:2!important;
+  &::before{
+    content:""!important;
+    width: 100%!important;
+    height: 100%!important;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.slick-next{
+  right:0!important;
+  width: 80px;
+  height: 80px;
+  background: #222 !important;
+  &:hover{
+    background: #222 !important;
+    &::before{
+      left: 60%;
+      transition: 0.3s;
+    }
+  }
+  &::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    width: 24px !important;
+    height: 21px !important;
+    background: url('../img/arrow.svg') 0 0 no-repeat !important;
+    background-size: contain!important;
+    opacity: 1;
+  }
+}
+
+.slick-prev{
+  left: 0 !important;
+  width: 80px;
+  height: 80px;
+  background: #222 !important;
+  &:hover{
+    background: #222 !important;
+    &::before{
+      left: 40%;
+      transition: 0.3s;
+    }
+  }
+  &::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%) rotate(180deg);
+    width: 24px !important;
+    height: 21px !important;
+    background: url('../img/arrow.svg') 0 0 no-repeat !important;
+    background-size: contain!important;
+    opacity: 1;
+  }
+}
+
+.slick-disabled{
+  display: none !important;
 }

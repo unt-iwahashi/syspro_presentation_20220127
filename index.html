@@ -11,6 +11,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/destyle.min.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
     <link rel="stylesheet" href="./css/style.css" />
     <title>Syspro_Figma_20220127</title>
     <script
@@ -25,6 +27,7 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"
       defer
     ></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"></script>
     <script src="./js/script.js" defer></script>
   </head>
@@ -70,11 +73,40 @@
         </div>
         <img src="./img/img_line_wave.png" alt="" class="el_line_wave" />
       </section>
-      <section class="bl_area">
-        <p>bl_area4</p>
-      </section>
+      <div class="bl_area">
+        <ul class="slick">
+          <li><img src="./img/slide_design01.png" alt="デザイン機能"/></li>
+          <li><img src="./img/slide_design02.png" alt="オートレイアウト"/></li>
+          <li><img src="./img/slide_design03.png" alt="アセット管理"/></li>
+          <li><img src="./img/slide_design04.png" alt="共同編集"/></li>
+        </ul>
+      </div>
+      <div class="bl_area">
+        <ul class="slick">
+          <li><img src="./img/slide_proto01.png" alt="プロトタイプ機能"/></li>
+          <li><img src="./img/slide_proto02.png" alt="トリガーとアクション"/></li>
+          <li><img src="./img/slide_proto03.png" alt="アニメーション"/></li>
+          <li><img src="./img/slide_proto04.png" alt="共有"/></li>
+        </ul>
+      </div>
+      <div class="bl_thoughts bl_area">
+        <div class="_inner">
+          <h2 class="bl_thoughts_ttl">使ってみた感想</h2>
+          <div class="bl_thoughts_contents el_leadTxt_s">
+            <div class="_box01">
+              <img src="./img/yamamura.png" alt="">
+              <p>ショートカットなどこれまで使ってきたソフトと同じ部分が多くすんなり入れた。機能の使い方を調べていると、古い記事に「XDにはない機能」的なことが書いてあるのを何度か見たが、日々のアップデートで今ではできることに明確な良し悪しの差はなくなっている印象を受けた。個人的にもっとも差を感じたのが、シャドウなどエフェクトの強さを設定できること。オートレイアウトにするための「フレーム化」という概念が少し分かりにくかったり、きちんと使うには多少の学習コストがかかるので案件で使うことになった際、困らないようにはしておきたい。</p>
+            </div>
+            <div class="_box02">
+              <img src="./img/iwahashi.png" alt="">
+              <p>個人的に良いと思った点は、選択したパーツに適用されているコンポーネント名が右側のデザインパネルに表示されること。コーディングに必要な情報はXDも右側に集約されているが、適用されているコンポーネント名はレイヤーを見ないとわからない。目線の移動が減ることでより作業がしやすく感じた。また、複数のパーツを選択した際に、グループ化をしなくても横幅の合計が表示される。何気に便利。今回の課題で初めてFigmaに触れたが、操作性がXDに近いこともあり違和感なく作業ができた。コーディングにおいては、XDに慣れていれば学習コストは低いように感じる。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-    <footer class="ly_footer">
+    <footer class="ly_footer" id="footer">
       <span class="bl_footer_logo">
         <img src="./img/logo_figma.png" alt="" />
       </span>

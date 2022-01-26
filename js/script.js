@@ -8,11 +8,19 @@ window.addEventListener('load', function () {
     duration: 0.8,
     scrollTrigger: {
       trigger: '.js-sideTxt-trigger',
-      start: 'bottom bottom',
+      start: 'bottom top',
     },
   });
 });
 
 (function ($) {
-  $.scrollify({ section: '.bl_area' });
+  $.scrollify({ 
+    section: '.bl_area',
+    setHeights: false,
+    interstitialSection: '#footer'
+  });
+
+  $('.slick').slick({
+    infinite: false,
+  });
 })(jQuery);
